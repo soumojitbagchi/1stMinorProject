@@ -1,0 +1,56 @@
+.handler-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.handler-input {
+  background-color: white;
+  border: 2px solid #ccc;
+  height: 50px;
+  width: 400px;
+  border-radius: 20px;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.handler-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.handler-input:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.handler-button {
+  padding: 12px 24px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.handler-button:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.handler-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.handler-error {
+  color: #dc2626;
+  font-size: 14px;
+  margin-top: 8px;
+}

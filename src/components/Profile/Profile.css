@@ -1,0 +1,17 @@
+.profile-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 40px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.profile-button:active {
+  transform: scale(0.95);
+}
