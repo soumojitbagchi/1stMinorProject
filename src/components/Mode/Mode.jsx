@@ -9,12 +9,11 @@ const Mode = ({ isDarkMode, onThemeChange }) => {
       onClick={() => onThemeChange(!isDarkMode)}
       title="Toggle theme"
     >
-      <body className={` ${isDarkMode ? 'dark' : 'light'}`}>
-        
-      </body>
+      
       {isDarkMode ? <MdLightMode /> : <MdOutlineDarkMode />}
     </button>
   );
 };
 
 export default Mode;
+

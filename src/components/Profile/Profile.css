@@ -9,9 +9,26 @@
 }
 
 .profile-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .profile-button:active {
   transform: scale(0.95);
 }
+
+.divOnclick{
+  height: 60px;
+  gap: 2px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  border-color: transparent;
+}
+.divOnclick:hover{
+  background-color: rgba(113, 109, 109, 0.5);
+  cursor: pointer;
+  scale: 1.009;
+  box-shadow: 0 0 20px rgba(96, 93, 93, 0.5) ;
+}
+@import "tailwindcss";

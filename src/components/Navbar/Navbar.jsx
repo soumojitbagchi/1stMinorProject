@@ -5,6 +5,7 @@ import Mode from '../Mode/Mode';
 import Settings from '../Settings/Settings';
 import Forecast from '../Forecast/Forecast';
 import './Navbar.css';
+import { pLink } from '../../services/extLinks';
 
 const Navbar = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -28,7 +29,7 @@ const Navbar = () => {
         <div className="navbar-controls">
           <Handler onDataFetch={handleWeatherData} loading={loading} setLoading={setLoading} setError={setError} />
           <Mode isDarkMode={isDarkMode} onThemeChange={handleThemeChange} />
-          <Profile />
+          <Profile  url={pLink}/>
           <Settings />
         </div>
       </div>

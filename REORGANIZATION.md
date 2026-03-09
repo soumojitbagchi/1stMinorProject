@@ -18,7 +18,7 @@ src/
 │   │   └── Mode.jsx✅
 |   |   └── Mode.css(for theme, dark/light)✅
 │   ├── Profile/
-│   │   └── Profile.jsx
+│   │   └── Profile.jsx (now making responsive)
 │   ├── Settings/
 │   │   └── Settings.jsx
 │   └── index.js (barrel export)

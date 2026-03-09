@@ -21,9 +21,9 @@ const Handler = ({ onDataFetch, loading, setLoading, setError }) => {
       console.log('Weather data:', data);
       onDataFetch(data);
       setCity('');
+      setLoading(false);
     } catch (err) {
       setError('Failed to fetch weather data. Please try again.');
-    } finally {
       setLoading(false);
     }
   };
