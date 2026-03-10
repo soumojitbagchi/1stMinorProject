@@ -12,6 +12,7 @@ const Mode = ({ isDarkMode, onThemeChange }) => {
       
       {isDarkMode ? <MdLightMode /> : <MdOutlineDarkMode />}
     </button>
+    
   );
 };
 

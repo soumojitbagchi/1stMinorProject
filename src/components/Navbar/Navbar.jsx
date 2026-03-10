@@ -6,6 +6,7 @@ import Settings from '../Settings/Settings';
 import Forecast from '../Forecast/Forecast';
 import './Navbar.css';
 import { pLink } from '../../services/extLinks';
+import { NavLink,Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -27,10 +28,15 @@ const Navbar = () => {
       <div className="navbar-header">
         <h1 className="navbar-title">Weather App</h1>
         <div className="navbar-controls">
+          
           <Handler onDataFetch={handleWeatherData} loading={loading} setLoading={setLoading} setError={setError} />
           <Mode isDarkMode={isDarkMode} onThemeChange={handleThemeChange} />
-          <Profile  url={pLink}/>
-          <Settings />
+          <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>
+            <Profile  url={pLink}/>
+          </NavLink>
+          <NavLink to="/settings" className={({ isActive }) => isActive ? 'active' : ''}>
+            <Settings />
+          </NavLink>
         </div>
       </div>
       <Forecast weatherData={weatherData} loading={loading} error={error} />

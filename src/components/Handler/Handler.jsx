@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { fetchWeatherData } from '../../services/weatherApi';
-import './Handler.css';
+import React, { useState } from "react";
+import { fetchWeatherData } from "../../services/weatherApi";
+import "./Handler.css";
 
 const Handler = ({ onDataFetch, loading, setLoading, setError }) => {
-  const [city, setCity] = useState('');
+  const [city, setCity] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!city.trim()) {
-      setError('Please enter a city name');
+      setError("Please enter a city name");
       return;
     }
 
@@ -18,13 +18,12 @@ const Handler = ({ onDataFetch, loading, setLoading, setError }) => {
 
     try {
       const data = await fetchWeatherData(city);
-      console.log('Weather data:', data);
+      console.log("Weather data:", data);
       onDataFetch(data);
-      setCity('');
-      setLoading(false);
+      setLoading(false)
     } catch (err) {
-      setError('Failed to fetch weather data. Please try again.');
-      setLoading(false);
+      setError("Failed to fetch weather data. Please try again.");
+      setLoading(false)
     }
   };
 
@@ -39,12 +38,8 @@ const Handler = ({ onDataFetch, loading, setLoading, setError }) => {
         onChange={(e) => setCity(e.target.value)}
         disabled={loading}
       />
-      <button 
-        type="submit" 
-        className="handler-button"
-        disabled={loading}
-      >
-        {loading ? 'Searching...' : 'Submit'}
+      <button type="submit" className="handler-button" disabled={loading}>
+        {loading ? "Searching..." : "Submit"}
       </button>
     </form>
   );

@@ -4,6 +4,7 @@ import { pLink } from "../../services/extLinks";
 import { CgArrowLongLeft } from "react-icons/cg";
 import { k } from "../../services/Profile1";
 import { IoIosArrowForward } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
 const MainProfile = () => {
   return (
@@ -13,7 +14,10 @@ const MainProfile = () => {
           className="Back-button h-7 w-10 rounded-full text-center "
           title="previous page"
         >
-          <CgArrowLongLeft className=" text-5xl pl-2 hover:bg-gray-200 relative left-[%] rounded-xl active:scale-90" />
+          <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
+            <CgArrowLongLeft className=" text-5xl pl-2 hover:bg-gray-200 relative left-[%] rounded-xl active:scale-90" />
+          </NavLink>
+          
         </div>
         <div className="flex-col relative right-[46%] gap-7 text-center">
           <img
