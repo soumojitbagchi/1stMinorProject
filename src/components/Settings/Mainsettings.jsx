@@ -21,7 +21,7 @@ const Mainsettings = () => {
       </div>
       <div className="flex-col left-[17%] w-[66%] bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg p-6 bg-no-repeat relative mt-8 pt-5 gap-1.5 text-center">
         <div className="divOnclick">
-          Edit Profile
+          Edit Theme
           <div>
             <IoIosArrowForward />
           </div>

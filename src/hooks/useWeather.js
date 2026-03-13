@@ -23,6 +23,7 @@ export const useWeather = () => {
       const url = `${WEATHER_API_BASE_URL}?q=${encodeURIComponent(city.trim())}&appid=${WEATHER_API_KEY}&units=${API_UNITS}`;
       const response = await axios.get(url);
       setWeatherData(response.data);
+      console.log(response.data)
       return response.data;
     } catch (err) {
       const message = err?.response?.data?.message || 'Failed to fetch weather data.';

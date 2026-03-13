@@ -17,22 +17,21 @@ const Navbar = () => {
   const handleWeatherData = (data) => {
     setWeatherData(data);
   };
-
   const handleThemeChange = (isDark) => {
     setIsDarkMode(isDark);
-    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme',theme);
   };
 
   return (
-    <div className="navbar-container" data-theme={isDarkMode ? 'dark' : 'light'}>
+    <div className={`navbar-container ${isDarkMode ? 'dark' : 'light'}`} data-theme={isDarkMode ? 'dark' : 'light'}>
       <div className="navbar-header">
         <h1 className="navbar-title">Weather App</h1>
         <div className="navbar-controls">
           
           <Handler onDataFetch={handleWeatherData} loading={loading} setLoading={setLoading} setError={setError} />
-          <Mode isDarkMode={isDarkMode} onThemeChange={handleThemeChange} />
+          <Mode isDarkMode={isDarkMode} setDarkMode={setIsDarkMode} onThemeChange={handleThemeChange} />
           <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>
-            <Profile  url={pLink}/>
+            <Profile  url={pLink} weatherData={weatherData}/>
           </NavLink>
           <NavLink to="/settings" className={({ isActive }) => isActive ? 'active' : ''}>
             <Settings />

@@ -43,6 +43,11 @@
   font-weight: 700;
   color: #0369a1;
   margin-bottom: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  max-width: 100%;
 }
 
 .weather-info {
